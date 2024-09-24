@@ -41,7 +41,7 @@ layers:
   - {t: /, s: '?'}
   - '&td0'
   - $$mdi:volume-off$$
-  - GUI
+  - LGUI
   - $$mdi:apple-keyboard-option$$
   - $$mdi:keyboard-space$$
   - $$mdi:arrow-right-bold$$
