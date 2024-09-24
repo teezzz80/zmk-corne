@@ -57,17 +57,17 @@ rgb_encoder: rgb_encoder {
             display-name = "QWERTY";
 
             // --------------------------------------------------------------------------------
-            // | ESC  |  Q  |  W  |  E  |  R  |  T  |                ↑    |  Y  |  U   |  I  |  O  |  P  | BKSP  |
-            // | TAB  |  A  |  S  |  D  |  F  |  G  |                ↓    |  H  |  J   |  K  |  L  |  ;  |  ENT  | 
+            // | ESC  |  Q  |  W  |  E  |  R  |  T  |                ↑    |  Y  |  U   |  I  |  O  |  P  | BSPC  |
+            // | TAB  |  A  |  S  |  D  |  F  |  G  |                ↓    |  H  |  J   |  K  |  L  |  ;  |  '    | 
             // | CTRL |  Z  |  X  |  C  |  V  |  B  |                ←    |  N  |  M   |  ,  |  .  |  /  | SHIFT |
-            //                    | GUI | ALT | SPC |                →    | LWR | RSE  | Fn  |
+            //                    | GUI | ALT | SPC |                →    | ENT | LWR  | RSE |
             //                                                      enter
 
             bindings = <
 &lt 3 ESC  &kp Q  &kp W         &kp E     &kp R  &kp T          &kp UP_ARROW        &kp Y   &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&kp TAB    &kp A  &kp S         &kp D     &kp F  &kp G          &kp DOWN_ARROW      &kp H   &kp J  &kp K      &kp L    &kp SEMI  &kp ENTER
+&kp TAB    &kp A  &kp S         &kp D     &kp F  &kp G          &kp DOWN_ARROW      &kp H   &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
 &kp LCTRL  &kp Z  &kp X         &kp C     &kp V  &kp B          &kp LEFT_ARROW      &kp N   &kp M  &kp COMMA  &kp DOT  &kp FSLH  &td0
-                  &kp C_MUTE    &kp LGUI  &kp LALT &kp SPACE    &kp RIGHT_ARROW     &mo 1   &mo 2  &mo 3
+                  &kp C_MUTE    &kp LGUI  &kp LALT &kp SPACE    &kp RIGHT_ARROW     &lt 3 ENTER  &mo1  &mo2
                                                                 &kp ENTER
             >;
 
@@ -79,15 +79,15 @@ rgb_encoder: rgb_encoder {
             display-name = "NUMBER";
 
             // ----------------------------------------------------------------------------------------------------
-            // |      | F1  | F2  | F3    | F4    | F5    |          | F6  | F7  | F8   | F9  | F10  | F11  |
-            // |      |  1  |  2  |  3    |  4    |  5    |          |  6  |  7  |  8   |  9  |  0   | F12  |
-            // |      |     |     | PrtSc | ScrLk | Pause |          | DEL | INS | HOME | END | PGUP | PGDN |
+            // |      | F1  | F2  | F3    | F4    | F5    |          | F6  | F7  | F8   | F9  | F10  | BSPC |
+            // |      |  1  |  2  |  3    |  4    |  5    |          |  6  |  7  |  8   |  9  |  0   |      |
+            // |      | F11 | F12 | PrtSc | ScrLk | Pause |          | DEL | INS | HOME | END | PGUP | PGDN |
             //                    |       |       |       |          |     |     |      |
 
             bindings = <
-&trans    &kp F1     &kp F2     &kp F3           &kp F4          &kp F5            &mmv MOVE_UP       &kp F6       &kp F7       &kp F8       &kp F9      &kp F10       &kp F11
-&trans    &kp N1     &kp N2     &kp N3           &kp N4          &kp N5            &mmv MOVE_DOWN     &kp N6       &kp N7       &kp N8       &kp N9      &kp N0        &kp F12
-&trans    &none      &none      &kp PRINTSCREEN  &kp SCROLLLOCK  &kp PAUSE_BREAK   &mmv MOVE_LEFT     &kp DEL      &kp INS      &kp HOME     &kp END     &kp PG_UP     &kp PG_DN
+&trans    &kp F1     &kp F2     &kp F3           &kp F4          &kp F5            &mmv MOVE_UP       &kp F6       &kp F7       &kp F8       &kp F9      &kp F10       &kp BSPC
+&trans    &kp N1     &kp N2     &kp N3           &kp N4          &kp N5            &mmv MOVE_DOWN     &kp N6       &kp N7       &kp N8       &kp N9      &kp N0        &none
+&trans    &kp F11    &kp F12    &kp PRINTSCREEN  &kp SCROLLLOCK  &kp PAUSE_BREAK   &mmv MOVE_LEFT     &kp DEL      &kp INS      &kp HOME     &kp END     &kp PG_UP     &kp PG_DN
                      &trans     &trans           &trans          &trans            &mmv MOVE_RIGHT    &trans       &trans       &trans
                                                                                    &mkp LCLK
             >;
@@ -100,15 +100,15 @@ rgb_encoder: rgb_encoder {
             display-name = "SYMBOL";
 
             // -----------------------------------------------------------------------------------------
-            // |     |  !  |  @  |  #  |  $  |  %  |         |  ^  |  &  |  *  |  (  |  )  |      |
+            // |     |  !  |  @  |  #  |  $  |  %  |         |  ^  |  &  |  *  |  (  |  )  | BSPC |
             // |     |     |     | MB1 | MB3 | MB2 |         |  -  |  =  |  [  |  ]  |  \  |  `   |
-            // |     |     |     |     |     |     |         |  _  |  +  |  {  |  }  | "|" |  ~   |
+            // |     |     |     |     | MB4 | MB5 |         |  _  |  +  |  {  |  }  | "|" |  ~   |
             //                   |     |     |     |         |     |     |     |
 
             bindings = <
-&trans     &kp EXCL      &kp AT        &kp HASH   &kp DLLR   &kp PRCNT    &mmv MOVE_UP       &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &trans
+&trans     &kp EXCL      &kp AT        &kp HASH   &kp DLLR   &kp PRCNT    &mmv MOVE_UP       &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
 &trans     &none         &none         &mkp MB1   &mkp MB3   &mkp MB2     &mmv MOVE_DOWN     &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
-&trans     &none         &none         &none      &none      &none        &mmv MOVE_LEFT     &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
+&trans     &none         &none         &none      &mkp MB4   &mkp MB5     &mmv MOVE_LEFT     &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
                          &trans        &trans     &trans     &trans       &mmv MOVE_RIGHT    &trans     &trans     &trans
                                                                           &mkp LCLK
             >;
@@ -120,7 +120,7 @@ rgb_encoder: rgb_encoder {
         layer_3 {
             display-name = "Fn";
 
-            // ----------------------------------------------------------------------------------------------------
+            // --------------------------------------------------------------------------------------------------------------------------------------------
             // |       | RGB_ON   | RGB_OFF   | RGB_EFF    | RGB_EFR |         |          | RGB_BRI | RGB_BRD | RGB_SPI    | RGB_SPD   |          |     |
             // | BTCLR | BT1      | BT2       | BT3        | BT4     | BT5     |          | EP_OFF  |         |            |           |          |     |
             // |       | soft_off | sys_reset | bootloader | OUT_BLE | OUT_USB |          |         |         | bootloader | sys_reset | soft_off |     |
@@ -129,7 +129,7 @@ rgb_encoder: rgb_encoder {
             bindings = <
 &trans          &rgb_ug RGB_ON      &rgb_ug RGB_OFF      &rgb_ug RGB_EFF       &rgb_ug RGB_EFR     &none           &mmv MOVE_UP     &rgb_ug RGB_BRI      &rgb_ug RGB_BRD     &rgb_ug RGB_SPI      &rgb_ug RGB_SPD      &none        &none
 &bt BT_CLR_ALL  &bt BT_SEL 0        &bt BT_SEL 1         &bt BT_SEL 2          &bt BT_SEL 3        &bt BT_SEL 4    &mmv MOVE_DOWN   &ext_power EP_OFF    &none               &none                &none                &none        &none
-&none           &sys_reset          &soft_off            &bootloader           &out OUT_BLE        &out OUT_USB    &mmv MOVE_LEFT   &none                &none               &bootloader          &sys_reset           &soft_off    &none
+&trans          &sys_reset          &soft_off            &bootloader           &out OUT_BLE        &out OUT_USB    &mmv MOVE_LEFT   &none                &none               &bootloader          &sys_reset           &soft_off    &none
                                     &trans               &trans                &trans              &trans          &mmv MOVE_RIGHT  &trans               &trans              &trans
                                                                                                                    &mkp LCLK
             >;
