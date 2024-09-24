@@ -67,7 +67,7 @@ rgb_encoder: rgb_encoder {
 &lt 3 ESC  &kp Q  &kp W         &kp E     &kp R  &kp T          &kp UP_ARROW        &kp Y   &kp U  &kp I      &kp O    &kp P     &kp BSPC
 &kp TAB    &kp A  &kp S         &kp D     &kp F  &kp G          &kp DOWN_ARROW      &kp H   &kp J  &kp K      &kp L    &kp SEMI  &kp ENTER
 &kp LCTRL  &kp Z  &kp X         &kp C     &kp V  &kp B          &kp LEFT_ARROW      &kp N   &kp M  &kp COMMA  &kp DOT  &kp FSLH  &td0
-                  &kp C_MUTE    &kp GUI   &kp LALT &kp SPACE    &kp RIGHT_ARROW     &mo 1   &mo 2  &mo 3
+                  &kp C_MUTE    &kp LGUI  &kp LALT &kp SPACE    &kp RIGHT_ARROW     &mo 1   &mo 2  &mo 3
                                                                 &kp ENTER
             >;
 
