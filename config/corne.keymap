@@ -57,18 +57,18 @@ rgb_encoder: rgb_encoder {
             display-name = "QWERTY";
 
             // -------------------------------------------------------------------------------------------------------
-            // | TAB   |  Q  |  W  |  E  |  R  |  T  |                ↑    |  Y  |  U   |  I  |  O  |  P  | BSPC |
-            // | SHIFT |  A  |  S  |  D  |  F  |  G  |                ↓    |  H  |  J   |  K  |  L  |  ;  |  '   | 
-            // | CTRL  |  Z  |  X  |  C  |  V  |  B  |                ←    |  N  |  M   |  ,  |  .  |  /  | ESC  |
+            // | TAB   |  Q  |  W  |  E  |  R  |  T  |                ↑    |  Y  |  U   |  I  |  O  |  P  | BSPC  |
+            // | SHIFT |  A  |  S  |  D  |  F  |  G  |                ↓    |  H  |  J   |  K  |  L  |  ;  |  '    | 
+            // | CTRL  |  Z  |  X  |  C  |  V  |  B  |                ←    |  N  |  M   |  ,  |  .  |  /  | SHIFT |
             //                     | GUI | ALT | SPC |                →    | ENT | LWR  | RSE |
             //                                                      enter
 
             bindings = <
-&lt 3 TAB  &kp Q  &kp W         &kp E     &kp R  &kp T          &kp UP_ARROW        &kp Y   &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&td0       &kp A  &kp S         &kp D     &kp F  &kp G          &kp DOWN_ARROW      &kp H   &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LCTRL  &kp Z  &kp X         &kp C     &kp V  &kp B          &kp LEFT_ARROW      &kp N   &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
-                  &kp C_MUTE    &kp LGUI  &kp LALT &kp SPACE    &kp RIGHT_ARROW     &lt 3 ENTER    &mo 1    &mo 2
-                                                                &kp ENTER
+&kp TAB    &kp Q  &kp W         &kp E     &kp R     &kp T          &kp UP_ARROW        &kp Y   &kp U  &kp I      &kp O    &kp P     &kp BSPC
+&td0       &kp A  &kp S         &kp D     &kp F     &kp G          &kp DOWN_ARROW      &kp H   &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LCTRL  &kp Z  &kp X         &kp C     &kp V     &kp B          &kp LEFT_ARROW      &kp N   &kp M  &kp COMMA  &kp DOT  &kp FSLH  &td0
+                  &kp C_MUTE    &kp LGUI  &kp LALT  &lt 3 SPACE    &kp RIGHT_ARROW     &lt 3 ENTER    &mo 1    &mo 2
+                                                                   &kp ENTER
             >;
 
             label = "QWERTY";
@@ -121,13 +121,13 @@ rgb_encoder: rgb_encoder {
             display-name = "Fn";
 
             // ------------------------------------------------------------------------------------------------------------------------------------------------
-            // |            | RGB_ON    | RGB_OFF  | RGB_EFF | RGB_EFR |       |          | RGB_BRI | RGB_BRD | RGB_SPI | RGB_SPD  |           |            |
+            // | ESC        | RGB_ON    | RGB_OFF  | RGB_EFF | RGB_EFR |       |          | RGB_BRI | RGB_BRD | RGB_SPI | RGB_SPD  |           |            |
             // | BTCLR      | BT1       | BT2      | BT3     | BT4     | BT5   |          | EP_OFF  |         |         |          |           |            |
             // | bootloader | sys_reset | soft_off | OUT_BLE | OUT_USB |       |          |         |         |         | soft_off | sys_reset | bootloader |
             //                                     |         |         |       |          |         |         |         |
 
             bindings = <
-&trans          &rgb_ug RGB_ON      &rgb_ug RGB_OFF      &rgb_ug RGB_EFF       &rgb_ug RGB_EFR     &none           &mmv MOVE_UP     &rgb_ug RGB_BRI      &rgb_ug RGB_BRD     &rgb_ug RGB_SPI      &rgb_ug RGB_SPD      &none        &none
+&kp ESC         &rgb_ug RGB_ON      &rgb_ug RGB_OFF      &rgb_ug RGB_EFF       &rgb_ug RGB_EFR     &none           &mmv MOVE_UP     &rgb_ug RGB_BRI      &rgb_ug RGB_BRD     &rgb_ug RGB_SPI      &rgb_ug RGB_SPD      &none        &none
 &bt BT_CLR_ALL  &bt BT_SEL 0        &bt BT_SEL 1         &bt BT_SEL 2          &bt BT_SEL 3        &bt BT_SEL 4    &mmv MOVE_DOWN   &ext_power EP_OFF    &none               &none                &none                &none        &none
 &bootloader     &sys_reset          &soft_off            &out OUT_BLE          &out OUT_USB        &none           &mmv MOVE_LEFT   &none                &none               &none                &soft_off            &sys_reset   &bootloader
                                     &trans               &trans                &trans              &trans          &mmv MOVE_RIGHT  &trans               &trans              &trans
