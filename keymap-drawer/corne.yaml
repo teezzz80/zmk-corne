@@ -1,7 +1,7 @@
 layout: {qmk_keyboard: corne_rotated, qmk_layout: LAYOUT_split_3x6_3}
 layers:
   default:
-  - {t: '$$mdi:keyboard-tab$$', h: '3'}
+  - $$mdi:keyboard-tab$$
   - Q
   - W
   - E
@@ -39,11 +39,11 @@ layers:
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - {t: /, s: '?'}
-  - $$mdi:keyboard-esc$$
+  - '&td0'
   - $$mdi:volume-off$$
   - LGUI
   - $$mdi:apple-keyboard-option$$
-  - $$mdi:keyboard-space$$
+  - {t: '$$mdi:keyboard-space$$', h: '3'}
   - $$mdi:arrow-right-bold$$
   - {t: '$$mdi:keyboard-return$$', h: '3'}
   - lower
@@ -148,7 +148,7 @@ layers:
   - {type: held}
   - $$mdi:mouse-left-click-outline$$
   '3':
-  - {type: held}
+  - $$mdi:keyboard-esc$$
   - RGB ON
   - RGB OFF
   - RGB EFF
@@ -190,7 +190,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
