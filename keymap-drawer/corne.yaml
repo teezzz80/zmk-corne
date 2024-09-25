@@ -1,7 +1,7 @@
 layout: {qmk_keyboard: corne_rotated, qmk_layout: LAYOUT_split_3x6_3}
 layers:
   default:
-  - {t: '$$mdi:keyboard-esc$$', h: '3'}
+  - {t: '$$mdi:keyboard-tab$$', h: '3'}
   - Q
   - W
   - E
@@ -14,7 +14,7 @@ layers:
   - O
   - P
   - {t: '$$mdi:backspace$$', type: backspace}
-  - $$mdi:keyboard-tab$$
+  - '&td0'
   - A
   - S
   - D
@@ -39,7 +39,7 @@ layers:
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - {t: /, s: '?'}
-  - '&td0'
+  - $$mdi:keyboard-esc$$
   - $$mdi:volume-off$$
   - LGUI
   - $$mdi:apple-keyboard-option$$
