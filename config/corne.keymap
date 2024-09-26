@@ -121,15 +121,15 @@ rgb_encoder: rgb_encoder {
             display-name = "Fn";
 
             // ------------------------------------------------------------------------------------------------------------------------------------------------
-            // | ESC        | RGB_ON    | RGB_OFF  | RGB_EFF | RGB_EFR |       |          | RGB_BRI | RGB_BRD | RGB_SPI | RGB_SPD  |           |            |
-            // | BTCLR      | BT1       | BT2      | BT3     | BT4     | BT5   |          | EP_OFF  |         |         |          |           |            |
-            // | bootloader | sys_reset | soft_off | OUT_BLE | OUT_USB |       |          |         |         |         | soft_off | sys_reset | bootloader |
-            //                                     |         |         |       |          |         |         |         |
+            // | ESC        | RGB_ON    | RGB_OFF  | RGB_EFF | RGB_EFR |       |          | RGB_BRI | RGB_BRD   | RGB_SPI  | RGB_SPD |         | bootloader |
+            // | BTCLR      | BT1       | BT2      | BT3     | BT4     | BT5   |          | EP_OFF  | sys_reset | soft_off |         | UP      |            |
+            // | bootloader | sys_reset | soft_off | OUT_BLE | OUT_USB |       |          |         |           |          | LEFT    | DOWN    | RIGHT      |
+            //                                     |         |         |       |          |         |           |          |
 
             bindings = <
-&kp ESC         &rgb_ug RGB_ON      &rgb_ug RGB_OFF      &rgb_ug RGB_EFF       &rgb_ug RGB_EFR     &none           &mmv MOVE_UP     &rgb_ug RGB_BRI      &rgb_ug RGB_BRD     &rgb_ug RGB_SPI      &rgb_ug RGB_SPD      &none        &none
-&bt BT_CLR_ALL  &bt BT_SEL 0        &bt BT_SEL 1         &bt BT_SEL 2          &bt BT_SEL 3        &bt BT_SEL 4    &mmv MOVE_DOWN   &ext_power EP_OFF    &none               &none                &none                &none        &none
-&bootloader     &sys_reset          &soft_off            &out OUT_BLE          &out OUT_USB        &none           &mmv MOVE_LEFT   &none                &none               &none                &soft_off            &sys_reset   &bootloader
+&kp ESC         &rgb_ug RGB_ON      &rgb_ug RGB_OFF      &rgb_ug RGB_EFF       &rgb_ug RGB_EFR     &none           &mmv MOVE_UP     &rgb_ug RGB_BRI      &rgb_ug RGB_BRD     &rgb_ug RGB_SPI      &rgb_ug RGB_SPD    &none            &bootloader
+&bt BT_CLR_ALL  &bt BT_SEL 0        &bt BT_SEL 1         &bt BT_SEL 2          &bt BT_SEL 3        &bt BT_SEL 4    &mmv MOVE_DOWN   &ext_power EP_OFF    &sys_reset          &soft_off            &none              &kp UP_ARROW     &none
+&bootloader     &sys_reset          &soft_off            &out OUT_BLE          &out OUT_USB        &none           &mmv MOVE_LEFT   &none                &none               &none                &kp LEFT_ARROW     &kp DOWN_ARROW   &kp RIGHT_ARROW
                                     &trans               &trans                &trans              &trans          &mmv MOVE_RIGHT  &trans               &trans              &trans
                                                                                                                    &mkp LCLK
             >;
