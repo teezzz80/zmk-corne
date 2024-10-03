@@ -171,9 +171,9 @@ layers:
   - EP OFF
   - {t: '$$mdi:backup-restore$$', type: bootloader}
   - '&soft_off'
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - HOME
   - $$mdi:arrow-up-bold$$
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - END
   - $$mdi:progress-download$$
   - {t: '$$mdi:backup-restore$$', type: bootloader}
   - '&soft_off'
