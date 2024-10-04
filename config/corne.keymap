@@ -61,14 +61,14 @@ rgb_encoder: rgb_encoder {
             // | SHIFT |  A  |  S  |  D  |  F  |  G  |                ↓    |  H  |  J   |  K  |  L  |  ;  |  '    | 
             // | CTRL  |  Z  |  X  |  C  |  V  |  B  |                ←    |  N  |  M   |  ,  |  .  |  /  | SHIFT |
             //                     | GUI | ALT | SPC |                →    | ENT | LWR  | RSE |
-            //                                                      enter
+            //                                                      space
 
             bindings = <
 &kp TAB    &kp Q  &kp W         &kp E     &kp R     &kp T          &kp UP_ARROW        &kp Y   &kp U  &kp I      &kp O    &kp P     &kp BSPC
 &td0       &kp A  &kp S         &kp D     &kp F     &kp G          &kp DOWN_ARROW      &kp H   &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
 &kp LCTRL  &kp Z  &kp X         &kp C     &kp V     &kp B          &kp LEFT_ARROW      &kp N   &kp M  &kp COMMA  &kp DOT  &kp FSLH  &td0
                   &kp C_MUTE    &kp LGUI  &kp LALT  &lt 3 SPACE    &kp RIGHT_ARROW     &lt 3 ENTER    &mo 1    &mo 2
-                                                                   &kp ENTER
+                                                                   &kp SPACE
             >;
 
             label = "QWERTY";
