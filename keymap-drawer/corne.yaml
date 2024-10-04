@@ -48,7 +48,7 @@ layers:
   - {t: '$$mdi:keyboard-return$$', h: '3'}
   - lower
   - raise
-  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - $$mdi:keyboard-space$$
   lower:
   - {t: '$$mdi:transfer$$', type: trans}
   - F1
