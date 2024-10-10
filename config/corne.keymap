@@ -79,11 +79,10 @@ rgb_encoder: rgb_encoder {
             display-name = "NUMBER";
 
             // ----------------------------------------------------------------------------------------------------
-            // |      | F1  | F2  | F3    | F4    | F5    |        MOUSE_UP    | F6  | F7  | F8   | F9  | F10  | BSPC |
-            // |      |  1  |  2  |  3    |  4    |  5    |        MOUSE_DOWN  |  6  |  7  |  8   |  9  |  0   |      |
-            // |      | F11 | F12 | PrtSc | ScrLk | Pause |        MOUSE_LEFT  | DEL | INS | HOME | END | PGUP | PGDN |
-            //                    |       |       |       |        MOUSE_RIGHT |     |     |      |
-            //                                                     MOUSE_LCLK
+            // |      | F1  | F2  | F3    | F4    | F5    |         | F6  | F7  | F8   | F9  | F10  | BSPC |
+            // |      |  1  |  2  |  3    |  4    |  5    |         |  6  |  7  |  8   |  9  |  0   |      |
+            // |      | F11 | F12 | PrtSc | ScrLk | Pause |         | DEL | INS | HOME | END | PGUP | PGDN |
+            //                    |       |       |       |         |     |     |      |
 
             bindings = <
 &trans    &kp F1     &kp F2     &kp F3           &kp F4          &kp F5            &mmv MOVE_UP       &kp F6       &kp F7       &kp F8       &kp F9      &kp F10       &kp BSPC
@@ -101,11 +100,10 @@ rgb_encoder: rgb_encoder {
             display-name = "SYMBOL";
 
             // -----------------------------------------------------------------------------------------
-            // |     |  !  |  @  |  #  |  $  |  %  |        MOUSE_UP    |  ^  |  &  |  *  |  (  |  )  | BSPC |
-            // |     |  ~  |     | MB1 | MB3 | MB2 |        MOUSE_DOWN  |     |  -  |  =  |  [  |  ]  |  \   |
-            // |     |  `  |     |     | MB4 | MB5 |        MOUSE_LEFT  |     |  _  |  +  |  {  |  }  | "|"  |
-            //                   |     |     |     |        MOUSE_RIGHT |     |     |     |
-            //                                              MOUSE_LCLK
+            // |     |  !  |  @  |  #  |  $  |  %  |          |  ^  |  &  |  *  |  (  |  )  | BSPC |
+            // |     |  ~  |     | MB1 | MB3 | MB2 |          |     |  -  |  =  |  [  |  ]  |  \   |
+            // |     |  `  |     |     | MB4 | MB5 |          |     |  _  |  +  |  {  |  }  | "|"  |
+            //                   |     |     |     |          |     |     |     |
 
             bindings = <
 &trans     &kp EXCL      &kp AT        &kp HASH   &kp DLLR   &kp PRCNT    &mmv MOVE_UP       &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR   &kp RPAR  &kp BSPC
@@ -123,11 +121,10 @@ rgb_encoder: rgb_encoder {
             display-name = "Fn";
 
             // ------------------------------------------------------------------------------------------------------------------------------------------------
-            // | ESC        | RGB_ON    | RGB_OFF  | RGB_EFF | RGB_EFR |       |       MOUSE_UP     | RGB_BRI | RGB_BRD    | RGB_SPI  | RGB_SPD |         | BSPC  |
-            // |            | BT1       | BT2      | BT3     | BT4     | BT5   |       MOUSE_DOWN   | EP_OFF  |            |          | HOME    | UP      | END   |
-            // |            |           |          | OUT_BLE | OUT_USB |       |       MOUSE_LEFT   |         |            |          | LEFT    | DOWN    | RIGHT |
-            //                                     |         |         |       |       MOUSE_RIGHT  |         |            |          |
-            //                                                                         BTCLR
+            // | ESC        | RGB_ON    | RGB_OFF  | RGB_EFF | RGB_EFR |       |          | RGB_BRI | RGB_BRD    | RGB_SPI  | RGB_SPD |         | BSPC  |
+            // |            | BT1       | BT2      | BT3     | BT4     | BT5   |          | EP_OFF  |            |          | HOME    | UP      | END   |
+            // |            |           |          | OUT_BLE | OUT_USB |       |          |         |            |          | LEFT    | DOWN    | RIGHT |
+            //                                     |         |         |       |          |         |            |          |
 
             bindings = <
 &kp ESC         &rgb_ug RGB_ON      &rgb_ug RGB_OFF      &rgb_ug RGB_EFF       &rgb_ug RGB_EFR     &none           &mmv MOVE_UP      &rgb_ug RGB_BRI      &rgb_ug RGB_BRD     &rgb_ug RGB_SPI      &rgb_ug RGB_SPD    &none            &kp BSPC
