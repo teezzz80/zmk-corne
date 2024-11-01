@@ -22,6 +22,13 @@
             bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
         };
 
+        td1: td1 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD1";
+            #binding-cells = <4>;
+            bindings = <&kp SQT>, <&to 0>;
+        };
+
         mmv {
             acceleration-exponent = <1>;      // 1
             time-to-max-speed-ms = <900>;    // 40
@@ -122,19 +129,40 @@
 
             // ------------------------------------------------------------------------------------------------------------------------------------------------
             // | ESC        | RGB_ON    | RGB_OFF  | RGB_EFF | RGB_EFR |       |          | RGB_BRI | RGB_BRD    | RGB_SPI  | RGB_SPD |         | BSPC  |
-            // |            | BT1       | BT2      | BT3     | BT4     | BT5   |          | EP_OFF  |            |          | HOME    | UP      | END   |
+            // |            | BT1       | BT2      | BT3     | BT4     | BT5   |          | GAME    |            |          | HOME    | UP      | END   |
             // |            |           |          | OUT_BLE | OUT_USB |       |          |         |            |          | LEFT    | DOWN    | RIGHT |
             //                                     |         |         |       |          |         |            |          |
 
             bindings = <
 &kp ESC         &rgb_ug RGB_ON      &rgb_ug RGB_OFF      &rgb_ug RGB_EFF       &rgb_ug RGB_EFR     &none           &mmv MOVE_UP      &rgb_ug RGB_BRI      &rgb_ug RGB_BRD     &rgb_ug RGB_SPI      &rgb_ug RGB_SPD    &none            &kp BSPC
-&trans          &bt BT_SEL 0        &bt BT_SEL 1         &bt BT_SEL 2          &bt BT_SEL 3        &bt BT_SEL 4    &mmv MOVE_DOWN    &none                &none               &none                &kp HOME           &kp UP_ARROW     &kp END
+&trans          &bt BT_SEL 0        &bt BT_SEL 1         &bt BT_SEL 2          &bt BT_SEL 3        &bt BT_SEL 4    &mmv MOVE_DOWN    &to 4                &none               &none                &kp HOME           &kp UP_ARROW     &kp END
 &trans          &none               &none                &out OUT_BLE          &out OUT_USB        &none           &mmv MOVE_LEFT    &none                &none               &none                &kp LEFT_ARROW     &kp DOWN_ARROW   &kp RIGHT_ARROW
                                     &trans               &trans                &trans              &trans          &mmv MOVE_RIGHT   &trans               &trans              &trans
                                                                                                                    &bt BT_CLR
             >;
 
             label = "FN";
+            sensor-bindings = <&scroll_encoder>;
+        };
+
+        layer_4 {
+            display-name = "GAME";
+
+            // ------------------------------------------------------------------------------------------------------------------------------------------------
+            // |            |    |    |    |    |    |       |         |    |    |    |    |         |
+            // |            |    |    |    |    |    |       |         |    |    |    |    | DEFAULT |
+            // |            |    |    |    |    |    |       |         |    |    |    |    |         |
+            //                             |    |    | SPACE |         |    |    |    |
+
+            bindings = <
+&kp ESC         &trans      &trans      &trans       &trans       &trans           &trans        &trans       &trans      &trans      &trans      &trans      &trans
+&trans          &trans      &trans      &trans       &trans       &trans           &trans        &trans       &trans      &trans      &trans      &trans      &td1
+&trans          &trans      &none       &trans       &trans       &trans           &trans        &trans       &trans      &trans      &trans      &trans      &trans
+                                        &trans       &trans       &kp SPACE        &trans        &trans       &trans      &trans      &trans
+                                                                                   &trans
+            >;
+
+            label = "GAME";
             sensor-bindings = <&scroll_encoder>;
         };
     };
