@@ -155,9 +155,9 @@
             //                             |    |    | SPACE |         |    |    |    |
 
             bindings = <
-&kp ESC         &trans      &trans      &trans       &trans       &trans           &trans        &trans       &trans      &trans      &trans      &trans      &trans
+&trans          &trans      &trans      &trans       &trans       &trans           &trans        &trans       &trans      &trans      &trans      &trans      &trans
 &trans          &trans      &trans      &trans       &trans       &trans           &trans        &trans       &trans      &trans      &trans      &trans      &td1
-&trans          &trans      &none       &trans       &trans       &trans           &trans        &trans       &trans      &trans      &trans      &trans      &trans
+&trans          &trans      &trans      &trans       &trans       &trans           &trans        &trans       &trans      &trans      &trans      &trans      &trans
                                         &trans       &trans       &kp SPACE        &trans        &trans       &trans      &trans      &trans
                                                                                    &trans
             >;
