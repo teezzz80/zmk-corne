@@ -25,7 +25,7 @@
         td1: td1 {
             compatible = "zmk,behavior-tap-dance";
             label = "TD1";
-            #binding-cells = <4>;
+            #binding-cells = <0>;
             bindings = <&kp SQT>, <&to 0>;
         };
 
