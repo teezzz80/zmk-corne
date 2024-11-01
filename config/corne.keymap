@@ -158,7 +158,7 @@
 &trans          &trans      &trans      &trans       &trans       &trans           &trans        &trans       &trans      &trans      &trans      &trans      &trans
 &trans          &trans      &trans      &trans       &trans       &trans           &trans        &trans       &trans      &trans      &trans      &trans      &td1
 &trans          &trans      &trans      &trans       &trans       &trans           &trans        &trans       &trans      &trans      &trans      &trans      &trans
-                                        &trans       &trans       &kp SPACE        &trans        &trans       &trans      &trans      &trans
+                                        &trans       &trans       &kp SPACE        &trans        &trans       &trans      &trans
                                                                                    &trans
             >;
 
